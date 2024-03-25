@@ -8,19 +8,16 @@ import { CreateComponent } from './components/item/create/create.component';
 import { DetailComponent } from './components/item/detail/detail.component';
 import { EditComponent } from './components/item/edit/edit.component';
 import { DeleteComponent } from './components/item/delete/delete.component';
+import {ItemModule} from "./modules/item/item.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    OverviewComponent,
-    CreateComponent,
-    DetailComponent,
-    EditComponent,
-    DeleteComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ItemModule
   ],
   providers: [],
   bootstrap: [AppComponent]
