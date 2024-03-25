@@ -24,13 +24,12 @@ export class ItemService {
       .then(response => response.data);
   }
   */
-  createItem(request:any): Promise<Item> {
-    let item = {
+  createItem(request:any): Promise<any> {
+    let saveItem = {
       name: request.title,
       description: request.description
     }
-    return axios.post('/api/v1/items', item)
-      .then(response => response.data);
+    return axios.post('/api/v1/items/add', saveItem);
   }
 
   updateItem(item: Item): Promise<Item> {
