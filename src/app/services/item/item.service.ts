@@ -9,9 +9,8 @@ export class ItemService {
 
   constructor() { }
 
-  getItems(): Promise<Item[]> {
-    return axios.get('/api/v1/items/all')
-      .then(response => response.data);
+  getAllItems(): Promise<any> {
+    return axios.get('/api/v1/items/all');
   }
 
   getItem(id: number): Promise<Item> {
@@ -39,9 +38,8 @@ export class ItemService {
       .then(response => response.data);
   }
 
-  deleteItem(id: number): Promise<Item> {
-    return axios.delete(`/api/v1/items/${id}`)
-      .then(response => response.data);
+  deleteItem (id: number): Promise<any>{
+    return axios.delete(`/api/v1/items/delete?id=${id}`);
   }
 
 }
