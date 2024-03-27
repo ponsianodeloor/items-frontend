@@ -13,9 +13,8 @@ export class ItemService {
     return axios.get('/api/v1/items/all');
   }
 
-  getItem(id: number): Promise<Item> {
-    return axios.get(`/api/v1/items/${id}`)
-      .then(response => response.data);
+  getItemDetail(id: number): Promise<any> {
+    return axios.get(`/api/v1/items/${id}`);
   }
 
   /**
@@ -33,8 +32,8 @@ export class ItemService {
       .then(response => response.data);
   }
 
-  updateItem(item: Item): Promise<Item> {
-    return axios.put(`/api/v1/items/${item.id}`, item)
+  updateItem(item: Item): Promise<any> {
+    return axios.put(`/api/v1/items/${item.id}/update`, item)
       .then(response => response.data);
   }
 
