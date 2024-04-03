@@ -8,6 +8,7 @@ import {DetailComponent} from "../../components/item/detail/detail.component";
 import {EditComponent} from "../../components/item/edit/edit.component";
 import {DeleteComponent} from "../../components/item/delete/delete.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {WebsocketFastapiComponent} from "../../components/item/websocket-fastapi/websocket-fastapi.component";
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     DetailComponent,
     CreateComponent,
     EditComponent,
-    DeleteComponent
+    DeleteComponent,
+    WebsocketFastapiComponent
   ],
   imports: [
     CommonModule,

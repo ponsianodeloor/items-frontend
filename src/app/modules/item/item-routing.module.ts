@@ -4,6 +4,7 @@ import { OverviewComponent } from "../../components/item/overview/overview.compo
 import { DetailComponent } from "../../components/item/detail/detail.component";
 import { CreateComponent } from "../../components/item/create/create.component";
 import { EditComponent } from "../../components/item/edit/edit.component";
+import { WebsocketFastapiComponent } from "../../components/item/websocket-fastapi/websocket-fastapi.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'items/overview', pathMatch: 'full'},
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'items/overview', component: OverviewComponent},
   { path: 'items/:id/details', component: DetailComponent},
   { path: 'items/create', component: CreateComponent},
-  { path: 'items/:id/edit', component: EditComponent}
+  { path: 'items/:id/edit', component: EditComponent},
+  { path: 'items/websocket-fast-api', component: WebsocketFastapiComponent }
 ];
 
 @NgModule({
